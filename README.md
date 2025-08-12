@@ -1,4 +1,4 @@
-# 🚗 RideFast - Ride Sharing Application
+# 🚗 Velocity - Ride Sharing Application
 
 A modern ride-sharing application similar to Rapido or Ola, built with Next.js frontend and Spring Boot backend.
 

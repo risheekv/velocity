@@ -45,7 +45,7 @@ function BookRideNavBar() {
             <Menu />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            RideFast Cab
+            Velocity Cab
           </Typography>
 
           {auth.user !== null ? (

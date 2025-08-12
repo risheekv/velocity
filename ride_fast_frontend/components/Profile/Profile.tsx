@@ -78,7 +78,7 @@ function Profile() {
         <div className="flex items-center p-3 border-b">
           <AccountBalanceWallet className="text-green-600" />
           <div className="ml-4 flex justify-between w-full">
-            <p className="text-gray-900">RideFast Money</p>
+            <p className="text-gray-900">Velocity Money</p>
             <p className="text-gray-600">Coming soon...</p>
           </div>
         </div>
@@ -92,7 +92,7 @@ function Profile() {
         <div className="flex items-center p-3 border-b">
           <Wifi className="text-green-600" />
           <div className="ml-4 flex justify-between w-full">
-            <p className="text-gray-900">RideFast Wifi Credentials</p>
+            <p className="text-gray-900">Velocity Wifi Credentials</p>
             <p className="text-gray-600">Coming soon...</p>
           </div>
         </div>

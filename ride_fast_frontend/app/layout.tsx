@@ -6,7 +6,7 @@ import ReduxProvider from "@/components/ReduxProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "RideFast",
+  title: "Velocity",
   description:
     "A Ride Sharing Application similar to that of Rapido or Ola where a customer can book their ride conveniently",
 };

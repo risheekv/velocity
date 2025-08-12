@@ -26,12 +26,12 @@ function NavBar() {
               >
                 <li className="mr-6 text-slate-200">
                   <Link href="/" className="hover:text-white">
-                    RideFast Electric
+                    Velocity Electric
                   </Link>
                 </li>
                 <li className="mr-6">
                   <Link href="/" className="hover:text-white">
-                    RideFast Factory
+                    Velocity Factory
                   </Link>
                 </li>
               </ul>
@@ -42,7 +42,7 @@ function NavBar() {
               className="hidden sm:block bg-gray-700 text-white hover:bg-gray-900 text-sm font-semibold px-4 py-3 rounded-md"
               onClick={() => router.push("/bookRide")}
             >
-              Book a RideFast Cab
+              Book a Velocity Cab
             </button>
             <button className="hidden sm:block  bg-white hover:bg-gray-300 text-sm font-semibold px-4 py-3 ml-5 rounded-md ">
               Free S1 Test Ride
@@ -62,12 +62,12 @@ function NavBar() {
               >
                 <li className="mt-2">
                   <Link href="/" className="hover:text-white">
-                    RideFast Electric
+                    Velocity Electric
                   </Link>
                 </li>
                 <li className="mt-4">
                   <Link href="/" className="hover:text-white">
-                    RideFast Factory
+                    Velocity Factory
                   </Link>
                 </li>
               </ul>
@@ -77,7 +77,7 @@ function NavBar() {
                 className="  bg-gray-700 text-white hover:bg-gray-900 text-sm font-semibold px-4 py-3 rounded-md"
                 onClick={() => router.push("/bookRide")}
               >
-                Book a RideFast Cab
+                Book a Velocity Cab
               </button>
               <button className="  bg-white hover:bg-gray-300 text-sm font-semibold px-4 py-3 ml-5 rounded-md ">
                 Free S1 Test Ride
