@@ -13,14 +13,13 @@ import { CircularProgressBar } from "../CustomLoader";
 
 const validationSchema = yup.object().shape({
   fullName: yup.string().required("fullname is required"),
-  mobile: yup.string().required("mobile is required"),
+  mobile: yup.string().required("mobile is required").min(10, "mobile number should be at least 10 digits"),
   email: yup
     .string()
     .email("invalid email")
     .required("email is required")
     .notOneOf(["ride@fast.com"], "You cannot pick this email"),
   password: yup
-  
     .string()
     .min(8, "password should be of atleast 8 characters")
     .required("password is required"),
@@ -42,24 +41,22 @@ function RegisterForm() {
     validationSchema,
     onSubmit: async (values) => {
       const { email, password, mobile, fullName } = values;
-      if (formik.isValid) {
-        try {
-          const response = await dispatch(
-            registerUser({ email, password, mobile, fullName })
+      try {
+        const response = await dispatch(
+          registerUser({ email, password, mobile, fullName })
+        );
+        
+        if (response.meta.requestStatus === 'rejected') {
+          const errorMessage = response.payload?.message || response.payload?.error || "Registration failed";
+          toast.error(errorMessage);
+        } else {
+          toast.success(
+            response.payload?.message || "Registered Successfully"
           );
-          if (response.payload.error) {
-            toast.error(response.payload.message);
-          } else if (response.payload === "Internal Server Error") {
-            toast.error(response.payload);
-          } else {
-            toast.success(
-              response.payload.message || "Registered Successfully"
-            );
-            router.push("/login");
-          }
-        } catch (error) {
-          toast.error("An error occured while registering");
+          router.push("/login");
         }
+      } catch (error) {
+        toast.error("An error occured while registering");
       }
     },
   });
